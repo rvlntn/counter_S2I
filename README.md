@@ -15,7 +15,7 @@ This is my first project with Javascript code.
 This is a project of Valentina Riva.
 
 ## Description
-This is my first project with Javascript language, realized 2022.
+This is my first project with Javascript language, realized in 2022.
 
 ## Technologies 
 Project created with:

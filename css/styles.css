@@ -161,13 +161,13 @@ a:hover {
     .subtractBtn {
         width: 50px;
         height: 50px;
-        font-size: 30px;
+        font-size: 25px;
         color: black;
         text-align: center;
     }
 
     .reset {
-        width: 60px;
+        width: 70px;
         height: 50px;
         font-size: 16px;
         color: black;
@@ -177,7 +177,7 @@ a:hover {
     .addBtn {
         width: 50px;
         height: 50px;
-        font-size: 30px;
+        font-size: 25px;
         color: black;
         text-align: center;
     }

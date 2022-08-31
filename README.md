@@ -5,11 +5,11 @@ This is my first project with Javascript code.
 1. [General Info](#general-info)
 2. [Description](#description)
 3. [Technologies](#technologies)
-4. [Installation] (#installation)
-5. [Collaboration] (#collaboration)
-6. [Know Bugs] (#know-Bugs)
-7. [License] (#license)
-8. [Contact Information] (#contact-Information)
+4. [Installation](#installation)
+5. [Collaboration](#collaboration)
+6. [Know Bugs](#know-Bugs)
+7. [License](#license)
+8. [Contact Information](#contact-Information)
 
 ## General Info
 This is a project of Valentina Riva.

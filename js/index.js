@@ -66,6 +66,3 @@ boxBtn.addEventListener ('click', (e) => {
         reset();
     }
 })
-
-
-

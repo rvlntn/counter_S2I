@@ -1,72 +1,71 @@
 // DISPLAY
-let displayNum = document.createElement('div');
-document.getElementById ('container').appendChild(displayNum);
-displayNum.classList.add('displayNum');
+let displayNumber = document.createElement ('div');
+document.getElementById ('container').appendChild(displayNumber);
+displayNumber.classList.add('displayNumber');
 
-let p = document.createElement ('p');
-let text = document.createTextNode ('0');
-displayNum.appendChild(p).appendChild(text);
-p.classList.add('text');
-
+let p = document.createElement('p');
+let text = document.createTextNode('0');
+p.classList.add('textNumber');
+displayNumber.appendChild(p).appendChild(text);
 
 // DIV BUTTON
-let boxBtn = document.createElement ('div');
+let boxBtn = document.createElement('div');
 document.getElementById('container').appendChild(boxBtn);
 boxBtn.classList.add('boxBtn');
 
-
 //- BUTTON 
-let subtractBtn = document.createElement ('button');
-let subtractText = document.createTextNode('-');
-subtractBtn.appendChild(subtractText);
-boxBtn.appendChild(subtractBtn);
-subtractBtn.classList.add('subtractBtn');
-
+let buttonMinus = document.createElement ('button');
+let buttonMinusText = document.createTextNode('-');
+boxBtn.appendChild(buttonMinus).appendChild(buttonMinusText);
+buttonMinus.classList.add('buttonMinus');
 
 // RESET BUTTON
-let reset = document.createElement ('button');
+let resetButton = document.createElement ('button');
 let resetText = document.createTextNode('reset');
-reset.appendChild(resetText);
-boxBtn.appendChild(reset);
-reset.classList.add('reset');
-
+boxBtn.appendChild(resetButton).appendChild(resetText);
+resetButton.classList.add('resetButton');
 
 // + BUTTON 
-let addBtn = document.createElement ('button');
+let buttonPlus = document.createElement ('button');
 let addText = document.createTextNode('+');
-addBtn.appendChild(addText);
-boxBtn.appendChild(addBtn);
-addBtn.classList.add('addBtn');
+boxBtn.appendChild(buttonPlus).appendChild(addText);
+buttonPlus.classList.add('buttonPlus');
 
-// COUNTER FUNCTION 
+
 let i = 0;
-
-subtractBtn.addEventListener ('click', () => {
-    i--;
-    if (i < 0) {
-        displayNum.style.fontSize = "60px";
-        displayNum.style.color = "#ff8870";
-        displayNum.style.fontWeight = "400";
-    }
-    displayNum.innerHTML = i;
-});
-
-reset.addEventListener ('click', () => {
-    i = 0;
-    if (i = 0) {
-        displayNum.style.fontSize = "60px";
-        displayNum.style.fontWeight = "400";
-    }
-    displayNum.innerHTML = i;
-});
-
-
-addBtn.addEventListener ('click', () => {
+function increment () {
     i++;
-    if (i >= 0) {
-        displayNum.style.fontSize = "60px";
-        displayNum.style.color = "#aed6ae";
-        displayNum.style.fontWeight = "400";
+    displayNumber.textContent = i;
+}
+
+function reset () {
+    i = 0;
+    displayNumber.textContent = i;
+}
+
+function decrement () {
+    i--;
+    displayNumber.textContent = i;
+}
+
+boxBtn.addEventListener ('click', (e) => {
+    displayNumber.style.fontWeight = '400';
+    displayNumber.style.fontSize = '60px';
+
+    if (e.target.className === 'buttonPlus') {
+        increment();
+        if (i >= 0) {
+            displayNumber.style.color = '#aed6ae';
+        }
+    } else if (e.target.className === 'buttonMinus'){
+        decrement();
+        if (i < 0) {
+            displayNumber.style.color = '#ff8870';
+        }
+    } else if (e.target.className === 'resetButton') {
+        reset();
     }
-    displayNum.innerHTML = i;
-});
+})
+
+
+
